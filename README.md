@@ -14,6 +14,9 @@ True, but, this one is _100% free!_ no annoying ads involved, no pop-ups, no ima
 
 Nope! No installation required, fire up the .exe file (Linux support is intended soon) and you're good to go!
 
+### Can I build from source?
+That's... A bit complicated, the Tesseract OCR files are heavy after it's installation, which don't play well with Git, so, for now, you may need to stick with the final files, sadly.
+
 ## Main functions:
 
 - Choose an image file to convert to text
