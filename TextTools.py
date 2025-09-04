@@ -80,6 +80,9 @@ def display_text(text):
     text_box.delete("1.0", tk.END)
     text_box.insert(tk.END, text)
     pyperclip.copy(text)  # copia automaticamente
+    status_label.config(text="✔ Texto copiado para a área de transferência")
+    root.after(3000, lambda: status_label.config(text=""))  # apaga depois de 3s
+
 
 # GUI
 root = tk.Tk()
@@ -94,6 +97,10 @@ tk.Button(root, text="Abrir Imagem do Link", command=from_url).pack(pady=5)
 
 text_box = tk.Text(root, height=15, width=60)
 text_box.pack(pady=5)
+
+status_label = tk.Label(root, text="", fg="green", font=("Arial", 10, "italic"))
+status_label.pack(pady=2)
+
 tk.Button(root, text="Sobre", command=show_about).pack(pady=5)
 
 
